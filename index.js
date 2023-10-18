@@ -38,6 +38,8 @@ class Account {
 // DRIVER CODE BELOW
 // We use the code below to "drive" the application logic above and make sure it's working as expected
 
+const myAccount = new Account("snow-patrol");
+
 t1 = new Withdrawal(50.25);
 t1.commit();
 console.log('Transaction 1:', t1);
