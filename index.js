@@ -2,24 +2,24 @@ let balance = 500.00;
 
 class Deposit {
 
-  constructor(amount) {
+  constructor(amount, account) {
     this.amount = amount;
   }
 
   commit() {
-    balance += this.amount;
+    account.balance += this.amount;
   }
 
 }
 
 class Withdrawal {
 
-  constructor(amount) {
+  constructor(amount, account) {
     this.amount = amount;
   }
 
   commit() {
-    balance -= this.amount;
+    account.balance -= this.amount;
   }
 
 }
