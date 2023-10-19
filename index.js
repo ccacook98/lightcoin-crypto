@@ -1,13 +1,12 @@
-let balance = 500.00;
-
 class Deposit {
 
   constructor(amount, account) {
     this.amount = amount;
+    this.account = account;
   }
 
   commit() {
-    account.balance += this.amount;
+    this.account.balance += this.amount;
   }
 
 }
@@ -16,10 +15,11 @@ class Withdrawal {
 
   constructor(amount, account) {
     this.amount = amount;
+    this.account = account;
   }
 
   commit() {
-    account.balance -= this.amount;
+    this.account.balance -= this.amount;
   }
 
 }
@@ -39,6 +39,7 @@ class Account {
 // We use the code below to "drive" the application logic above and make sure it's working as expected
 
 const myAccount = new Account("snow-patrol");
+myAccount.balance = 500.00;
 
 t1 = new Withdrawal(50.25, myAccount);
 t1.commit();
